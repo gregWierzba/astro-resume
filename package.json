@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "validate": "bun scripts/validate-resume.ts",
+    "build": "bun scripts/validate-resume.ts && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
