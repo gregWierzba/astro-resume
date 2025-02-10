@@ -1,0 +1,25 @@
+---
+import type { Education } from "@/types/Resume";
+
+const education: Education[] = Astro.props.education;
+---
+
+<h3>Education</h3>
+<div>
+  {
+    education.map((education) => (
+      <div class="flex listing">
+        <div class="flex-none w-70 flex-col flex justify-center">
+          <h5>{education.institution}</h5>
+          <p class="font-bold">{education.degree}</p>
+          <p class="!font-thin !text-xs !text-gray-600">
+            {education.startDate} - {education.endDate}
+          </p>
+        </div>
+        <div class="flex-1 flex-col flex justify-center text-justify">
+          {education.description}
+        </div>
+      </div>
+    ))
+  }
+</div>

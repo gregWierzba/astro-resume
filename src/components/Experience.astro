@@ -1,0 +1,25 @@
+---
+import type { Experience } from "@/types/Resume";
+
+const experience: Experience[] = Astro.props.experience;
+---
+
+<h3>Experience</h3>
+<div>
+  {
+    experience.map((experience) => (
+      <div class="flex listing">
+        <div class="flex-none w-70 flex-col flex justify-center">
+          <h5>{experience.company}</h5>
+          <p class="font-bold">{experience.position}</p>
+          <p class="!font-thin !text-xs !text-gray-600">
+            {experience.startDate} - {experience.endDate}
+          </p>
+        </div>
+        <div class="flex-1 flex-col flex justify-center text-justify">
+          {experience.responsibilities}
+        </div>
+      </div>
+    ))
+  }
+</div>

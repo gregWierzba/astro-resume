@@ -1,0 +1,64 @@
+{
+    "name": "John Doe",
+    "title": "Software Engineer",
+    "contact": {
+        "email": "john.doe@example.com",
+        "website": "https://johndoe.com",
+        "linkedin": "https://linkedin.com/in/johndoe",
+        "github": "https://github.com/johndoe"
+    },
+    "about": {
+        "summary": "Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
+        "photo": "./src/assets/me.jpg"
+    },
+    "projects": [
+        {
+            "name": "Project One",
+            "description": "A web application that allows users to track their tasks using React and Node.js.",
+            "technologies": ["React", "Node.js", "MongoDB"],
+            "url": "https://github.com/johndoe/project-one"
+        },
+        {
+            "name": "Project Two",
+            "description": "A mobile app built with React Native and <mark>Firebase</mark> that helps users manage their finances.",
+            "technologies": ["React Native", "Firebase"],
+            "url": "https://github.com/johndoe/project-two"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Tech Company",
+            "position": "Senior Software Engineer",
+            "startDate": "2020-01-01",
+            "endDate": "Present",
+            "website": "https://techcompany.com",
+            "responsibilities": "Lead a team of 5 engineers to develop scalable web applications using React. Implemented new features and optimized existing ones using Node.js and MongoDB."
+        },
+        {
+            "company": "Another Tech Company",
+            "position": "Software Engineer",
+            "startDate": "2017-06-01",
+            "endDate": "2019-12-31",
+            "website": "https://techcompany.com",
+            "responsibilities": "Working at NatWest as a front end engineer focusing mostly on a corporate banking product called Bankline. Working as part of a scrum team consisting of 5 developers, 2 testers and a PO/BA. The front end is a React app that talks to an API built using a collection of Java microservices. I have spent time working in multiple parts of the stack including helping to define our front end architecture to follow best practices to implementing PDF and CSV export in a microservice."
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Technology",
+            "degree": "Bachelor of Science in Computer Science",
+            "startDate": "2013-09-01",
+            "endDate": "2017-06-01",
+            "description": "Studied computer science and software engineering. Completed courses in algorithms, data structures, software design, and database management."
+        }
+    ],
+    "afterHours": "I enjoy playing guitar and reading science fiction novels.",
+    "footerNote": "Last updated on 2021-01-01",
+    "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Python",
+        "SQL"
+    ]
+}

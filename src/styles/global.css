@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-display--font-feature-settings: "kern", "liga", "pnum";
+  --font-display--font-variation-settings: "opsz" 32;
+}
+
+/* Custom styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 dark:bg-slate-900 text-gray-800 text-sm font-light;
+  }
+}
+
+h3 {
+  @apply text-2xl text-gray-800 font-light pb-1 text-center border-b-2 border-dashed border-slate-300 mb-5 mt-5;
+}
+
+h4 {
+  @apply text-lg text-gray-800 font-bold pb-0 text-center mb-0;
+}
+
+h5 {
+  @apply text-lg text-gray-800 font-medium pb-0 text-left mb-0;
+}
+
+p.dates {
+  @apply font-thin text-xs text-gray-600;
+}
+
+mark {
+  @apply px-1 py-0.5 bg-gray-800 text-white rounded text-sm;
+}
+
+.listing {
+  @apply border-b-1 last:border-b-0 border-dashed border-slate-300 mb-5 pb-5;
+}
