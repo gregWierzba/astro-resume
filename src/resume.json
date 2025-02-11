@@ -1,11 +1,13 @@
 {
-    "name": "John Doe",
-    "title": "Software Engineer",
-    "contact": {
-        "email": "john.doe@example.com",
-        "website": "https://johndoe.com",
-        "linkedin": "https://linkedin.com/in/johndoe",
-        "github": "https://github.com/johndoe"
+    "header": {
+        "name": "John Doe",
+        "title": "Software Engineer",
+        "contact": {
+            "email": "john.doe@example.com",
+            "website": "https://johndoe.com",
+            "linkedin": "https://linkedin.com/in/johndoe",
+            "github": "https://github.com/johndoe"
+        }
     },
     "about": {
         "summary": "Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
