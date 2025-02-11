@@ -83,7 +83,7 @@ mark {
   }
 
   mark {
-    @apply !bg-gray-200 !text-black !border !border-gray-400;
+    @apply !bg-none !text-inherit !border-none !p-0 !m-0 !rounded-none;
   }
 
   /* Remove hover effects and transitions */

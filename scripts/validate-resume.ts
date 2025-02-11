@@ -29,11 +29,8 @@ const ProjectSchema = z.object({
 const ExperienceSchema = z.object({
   company: z.string(),
   position: z.string(),
-  startDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
-  endDate: z.union([
-    z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
-    z.literal("Present"),
-  ]),
+  startDate: z.string(),
+  endDate: z.string(),
   website: z.string().url(),
   responsibilities: z.string(),
 });
@@ -41,8 +38,8 @@ const ExperienceSchema = z.object({
 const EducationSchema = z.object({
   institution: z.string(),
   degree: z.string(),
-  startDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
-  endDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
+  startDate: z.string(),
+  endDate: z.string(),
   description: z.string(),
 });
 
