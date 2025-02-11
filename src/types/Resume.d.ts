@@ -1,12 +1,5 @@
 export type Resume = {
-  name: string;
-  title: string;
-  contact: {
-    email: string;
-    website: string;
-    linkedin: string;
-    github: string;
-  };
+  header: Header;
   about: About;
   projects: Project[];
   experience: Experience[];
@@ -43,4 +36,15 @@ export type Education = {
   startDate: string;
   endDate: string;
   description: string;
+};
+
+export type Header = {
+  name: string;
+  title: string;
+  contact: {
+    email: string;
+    website: string;
+    linkedin: string;
+    github: string;
+  };
 };

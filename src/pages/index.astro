@@ -12,7 +12,7 @@ const resumeData: Resume = resumeRaw;
 ---
 
 <ResumeLayout>
-  <Header />
+  <Header header={resumeData.header} />
   <About about={resumeData.about} />
 
   <Projects projects={resumeData.projects} />
