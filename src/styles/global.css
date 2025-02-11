@@ -42,3 +42,85 @@ mark {
 .listing {
   @apply border-b-1 last:border-b-0 border-dashed border-slate-300 dark:border-slate-700 mb-5 pb-5;
 }
+
+/* Print styles */
+@media print {
+  /* Reset background and text colors for printing */
+  body {
+    @apply !bg-white !text-black;
+  }
+
+  /* Remove dark mode styles when printing */
+  .dark\:bg-gray-900,
+  .dark\:text-gray-100,
+  .dark\:text-gray-400,
+  .dark\:border-slate-700 {
+    @apply !bg-white !text-black !border-gray-300;
+  }
+
+  /* Hide social media icons and other unnecessary elements */
+  .no-print,
+  a[href^="https://github.com"],
+  a[href^="https://linkedin.com"],
+  a[href^="https://twitter.com"]
+  {
+    display: none;
+  }
+
+  /* Optimize headings for print */
+  h3 {
+    @apply !text-xl !text-black !border-gray-400;
+  }
+
+  h4,
+  h5 {
+    @apply !text-base !text-black;
+  }
+
+  /* Ensure proper contrast for dates and marks */
+  p.dates {
+    @apply !text-gray-700;
+  }
+
+  mark {
+    @apply !bg-gray-200 !text-black !border !border-gray-400;
+  }
+
+  /* Remove hover effects and transitions */
+  * {
+    transition: none;
+    transform: none;
+  }
+
+  /* Set proper margins and layout */
+  @page {
+    margin: 1.5cm;
+  }
+
+  /* Ensure proper page breaks */
+  h3,
+  .listing {
+    break-inside: avoid;
+  }
+
+  /* Remove shadows and decorative elements */
+  * {
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  /* Ensure links are readable but not underlined */
+  a {
+    @apply !no-underline !text-black;
+  }
+
+  /* Show email in print */
+  a[href^="mailto:"] {
+    @apply !inline-flex !items-center !text-black !gap-1;
+  }
+
+  /* Adjust email icon size for print */
+  a[href^="mailto:"] svg {
+    @apply !w-4 !h-4;
+  }
+}
