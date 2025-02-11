@@ -9,7 +9,7 @@
     },
     "about": {
         "summary": "Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
-        "photo": "./src/assets/me.jpg"
+        "photo": "me.jpg"
     },
     "projects": [
         {
