@@ -4,9 +4,14 @@ import resumeData from "../src/resume.json";
 // Define Zod schemas matching our TypeScript types
 const ContactSchema = z.object({
   email: z.string().email(),
-  website: z.string().url(),
   linkedin: z.string().url(),
   github: z.string().url(),
+});
+
+const HeaderSchema = z.object({
+  name: z.string(),
+  title: z.string(),
+  contact: ContactSchema,
 });
 
 const AboutSchema = z.object({
@@ -24,9 +29,9 @@ const ProjectSchema = z.object({
 const ExperienceSchema = z.object({
   company: z.string(),
   position: z.string(),
-  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  startDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
   endDate: z.union([
-    z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
     z.literal("Present"),
   ]),
   website: z.string().url(),
@@ -36,22 +41,20 @@ const ExperienceSchema = z.object({
 const EducationSchema = z.object({
   institution: z.string(),
   degree: z.string(),
-  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  startDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
+  endDate: z.string().regex(/^\d{2}-\d{2}-\d{4}$/),
   description: z.string(),
 });
 
 const ResumeSchema = z.object({
-  name: z.string(),
-  title: z.string(),
-  contact: ContactSchema,
+  header: HeaderSchema,
   about: AboutSchema,
   projects: z.array(ProjectSchema),
   experience: z.array(ExperienceSchema),
   education: z.array(EducationSchema),
   afterHours: z.string(),
-  footerNote: z.string(),
   skills: z.array(z.string()),
+  footerNote: z.string(),
 });
 
 try {
