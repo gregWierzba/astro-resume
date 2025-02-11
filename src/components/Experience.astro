@@ -20,7 +20,7 @@ const { experience } = Astro.props;
           </p>
         </div>
         <div class="flex-1 flex-col flex justify-center text-justify">
-          {experience.responsibilities}
+          <span set:html={experience.responsibilities} />
         </div>
       </div>
     ))

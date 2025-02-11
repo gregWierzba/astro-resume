@@ -14,9 +14,7 @@ const { about } = Astro.props;
     ></span>
   </div>
   <div>
-    <p class="text-justify">
-      {about.summary}
-    </p>
+    <p class="text-justify" set:html={about.summary} />
   </div>
 </div>
 <style>
