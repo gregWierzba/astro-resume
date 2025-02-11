@@ -15,30 +15,30 @@
   }
 
   body {
-    @apply bg-stone-50 text-gray-800 text-sm font-light;
+    @apply bg-stone-50 text-gray-800 text-sm font-light dark:bg-gray-900 dark:text-gray-100;
   }
 }
 
 h3 {
-  @apply text-2xl text-gray-800 font-light pb-1 text-center border-b-2 border-dashed border-slate-300 mb-5 mt-5;
+  @apply text-2xl text-gray-800 dark:text-gray-100 font-light pb-1 text-center border-b-2 border-dashed border-slate-300 dark:border-slate-700 mb-5 mt-5;
 }
 
 h4 {
-  @apply text-lg text-gray-800 font-bold pb-0 text-center mb-0;
+  @apply text-lg text-gray-800 dark:text-gray-100 font-bold pb-0 text-center mb-0;
 }
 
 h5 {
-  @apply text-lg text-gray-800 font-medium pb-0 text-left mb-0;
+  @apply text-lg text-gray-800 dark:text-gray-100 font-medium pb-0 text-left mb-0;
 }
 
 p.dates {
-  @apply font-thin text-xs text-gray-600;
+  @apply font-thin text-xs text-gray-600 dark:text-gray-400;
 }
 
 mark {
-  @apply px-1 py-0.5 bg-gray-800 text-white rounded text-sm;
+  @apply px-1 py-0.5 bg-gray-800 text-white dark:bg-gray-100 dark:text-gray-900 rounded text-sm;
 }
 
 .listing {
-  @apply border-b-1 last:border-b-0 border-dashed border-slate-300 mb-5 pb-5;
+  @apply border-b-1 last:border-b-0 border-dashed border-slate-300 dark:border-slate-700 mb-5 pb-5;
 }

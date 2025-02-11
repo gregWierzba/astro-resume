@@ -12,7 +12,7 @@ const experience: Experience[] = Astro.props.experience;
         <div class="flex-none w-70 flex-col flex justify-center">
           <h5>{experience.company}</h5>
           <p class="font-bold">{experience.position}</p>
-          <p class="!font-thin !text-xs !text-gray-600">
+          <p class="!font-thin !text-xs !text-gray-600 dark:!text-gray-400">
             {experience.startDate} - {experience.endDate}
           </p>
         </div>

@@ -10,10 +10,10 @@ const projects: Project[] = Astro.props.projects;
     projects.map((project) => (
       <div class="mb-8 listing">
         <h4>{project.name}</h4>
-        <div class="flex items-baseline justify-center group ">
+        <div class="flex items-baseline justify-center group">
           <a
             href={project.url}
-            class="text-gray-500 text-xs italic font-extralight leading-none"
+            class="text-gray-500 dark:text-gray-400 text-xs italic font-extralight leading-none hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
           >
             {project.url}
             <svg
@@ -21,7 +21,7 @@ const projects: Project[] = Astro.props.projects;
               height="15px"
               viewBox="0 0 32 32"
               xmlns="http://www.w3.org/2000/svg"
-              class="inline-block pb-0.5"
+              class="inline-block pb-0.5 fill-current"
             >
               <path d="M 18 5 L 18 7 L 23.5625 7 L 11.28125 19.28125 L 12.71875 20.71875 L 25 8.4375 L 25 14 L 27 14 L 27 5 Z M 5 9 L 5 27 L 23 27 L 23 14 L 21 16 L 21 25 L 7 25 L 7 11 L 16 11 L 18 9 Z" />
             </svg>

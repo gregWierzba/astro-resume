@@ -12,7 +12,7 @@ const education: Education[] = Astro.props.education;
         <div class="flex-none w-70 flex-col flex justify-center">
           <h5>{education.institution}</h5>
           <p class="font-bold">{education.degree}</p>
-          <p class="!font-thin !text-xs !text-gray-600">
+          <p class="!font-thin !text-xs !text-gray-600 dark:!text-gray-400">
             {education.startDate} - {education.endDate}
           </p>
         </div>
