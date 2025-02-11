@@ -1,5 +1,8 @@
 ---
-const afterHours: string = Astro.props.afterHours;
+interface Props {
+  afterHours: string;
+}
+const { afterHours } = Astro.props;
 ---
 
 <h3>After hours</h3>

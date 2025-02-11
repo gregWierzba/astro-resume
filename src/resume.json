@@ -4,7 +4,6 @@
         "title": "Software Engineer",
         "contact": {
             "email": "john.doe@example.com",
-            "website": "https://johndoe.com",
             "linkedin": "https://linkedin.com/in/johndoe",
             "github": "https://github.com/johndoe"
         }
@@ -31,7 +30,7 @@
         {
             "company": "Tech Company",
             "position": "Senior Software Engineer",
-            "startDate": "2020-01-01",
+            "startDate": "01-01-2021",
             "endDate": "Present",
             "website": "https://techcompany.com",
             "responsibilities": "Lead a team of 5 engineers to develop scalable web applications using React. Implemented new features and optimized existing ones using Node.js and MongoDB."
@@ -39,8 +38,8 @@
         {
             "company": "Another Tech Company",
             "position": "Software Engineer",
-            "startDate": "2017-06-01",
-            "endDate": "2019-12-31",
+            "startDate": "01-01-2021",
+            "endDate": "01-01-2021",
             "website": "https://techcompany.com",
             "responsibilities": "Working at NatWest as a front end engineer focusing mostly on a corporate banking product called Bankline. Working as part of a scrum team consisting of 5 developers, 2 testers and a PO/BA. The front end is a React app that talks to an API built using a collection of Java microservices. I have spent time working in multiple parts of the stack including helping to define our front end architecture to follow best practices to implementing PDF and CSV export in a microservice."
         }
@@ -49,13 +48,13 @@
         {
             "institution": "University of Technology",
             "degree": "Bachelor of Science in Computer Science",
-            "startDate": "2013-09-01",
-            "endDate": "2017-06-01",
+            "startDate": "01-01-2021",
+            "endDate": "01-01-2021",
             "description": "Studied computer science and software engineering. Completed courses in algorithms, data structures, software design, and database management."
         }
     ],
     "afterHours": "I enjoy playing guitar and reading science fiction novels.",
-    "footerNote": "Last updated on 2021-01-01",
+    "footerNote": "Last updated on 01-01-2021",
     "skills": [
         "JavaScript",
         "React",

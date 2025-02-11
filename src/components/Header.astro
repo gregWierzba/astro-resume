@@ -1,7 +1,10 @@
 ---
 import type { Header } from "@/types/Resume"; // Import the Header type
 
-const header: Header = Astro.props.header;
+interface Props {
+  header: Header;
+}
+const { header } = Astro.props;
 ---
 
 <header class="grid grid-flow-col grid-rows-2 justify-between items-start">

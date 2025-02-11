@@ -1,7 +1,10 @@
 ---
 import type { About } from "@/types/Resume"; // Import the About interface
 
-const about: About = Astro.props.about;
+interface Props {
+  about: About;
+}
+const { about } = Astro.props;
 ---
 
 <h3>About Me</h3>

@@ -43,7 +43,6 @@ export type Header = {
   title: string;
   contact: {
     email: string;
-    website: string;
     linkedin: string;
     github: string;
   };

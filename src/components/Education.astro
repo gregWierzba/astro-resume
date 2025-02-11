@@ -1,7 +1,10 @@
 ---
 import type { Education } from "@/types/Resume";
 
-const education: Education[] = Astro.props.education;
+interface Props {
+  education: Education[];
+}
+const { education } = Astro.props;
 ---
 
 <h3>Education</h3>
