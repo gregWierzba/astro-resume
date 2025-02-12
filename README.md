@@ -7,14 +7,17 @@
 
 A modern, type-safe resume builder created with Astro, TypeScript, and TailwindCSS. Generate a beautiful, responsive resume from JSON data with strong type checking and component-based architecture.
 
+This project is an Astro implementation inspired by the [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) created by [James Grant](https://github.com/sproogen). The original theme was built for Jekyll, and this project adapts its design principles and layout while reimagining it with modern web technologies.
+
 ## 🚀 Features
 
-- **Type-Safe Resume Data**: Strongly typed resume structure using TypeScript and Zod validation
+- **Type-Safe Resume Data**: Strongly typed resume structure using TypeScript
 - **Component-Based Design**: Modular components for each resume section
 - **Responsive Layout**: Mobile-first design using TailwindCSS
 - **Easy Customization**: Simple JSON-based content management
 - **Fast Performance**: Static site generation with Astro
 - **SEO Optimized**: Built-in meta tags and semantic HTML
+- **PDF Export**: Built-in functionality to generate PDF versions of your resume
 
 ## 📋 Prerequisites
 
@@ -26,8 +29,8 @@ A modern, type-safe resume builder created with Astro, TypeScript, and TailwindC
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/modern-resume-builder.git
-cd modern-resume-builder
+git clone https://github.com/yourusername/astro-resume.git
+cd astro-resume
 ```
 
 2. Install dependencies:
@@ -66,22 +69,29 @@ Edit `src/resume.json` with your information:
 
 ### 2. Validate Resume Data
 
-The project includes a Zod validation script to ensure your resume data matches the expected schema:
+The project includes a validation script to ensure your resume data matches the expected schema:
 
 ```bash
-bun run scripts/validate-resume.ts
+bun run validate
 ```
 
 This will:
 
-- Validate all fields against the schema
-- Check date formats (YYYY-MM-DD)
-- Verify URL formats
-- Validate email addresses
+- Validate all fields against the TypeScript types
 - Show resume statistics
 - Exit with error if validation fails
 
-### 3. Type Definitions
+### 3. Generate PDF
+
+Generate a PDF version of your resume:
+
+```bash
+bun run generate-pdf
+```
+
+The PDF will be saved in the `public` directory.
+
+### 4. Type Definitions
 
 The resume data structure is defined in `src/types/Resume.d.ts`:
 
@@ -99,7 +109,7 @@ export type Resume = {
 };
 ```
 
-### 4. Customize Components
+### 5. Customize Components
 
 Each section of the resume is a separate component in `src/components/`:
 
@@ -118,11 +128,16 @@ The project uses Astro's configuration file (`astro.config.mjs`):
 
 ```javascript
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  integrations: [react()],
-  // Add custom configuration here
+  integrations: [],
+  devToolbar: {
+    enabled: false,
+  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
 ```
 
@@ -172,7 +187,7 @@ The project includes type checking and data validation:
 bunx tsc --noEmit
 
 # Validate resume data
-bun run scripts/validate-resume.ts
+bun run validate
 ```
 
 ## 🤝 Contributing
@@ -187,12 +202,11 @@ bun run scripts/validate-resume.ts
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+The design of this project is inspired by the [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) created by James Grant, which is also licensed under the MIT License.
+
 ## 🎯 Roadmap
 
-- [ ] Add PDF export functionality
 - [ ] Implement additional resume templates
-- [ ] Add dark mode support
-- [ ] Include print-specific styling
 - [ ] Add internationalization support
 
 ## 🐛 Known Issues
@@ -202,18 +216,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📦 Dependencies
 
 - Astro v5.2.5
-- React v19.0.0
-- TailwindCSS v4.0.3
+- TailwindCSS v4.0.6
 - TypeScript (included with Astro)
-- Zod (for schema validation)
+- Playwright (for PDF generation)
 
 ## 🙏 Acknowledgments
 
+- [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) by [James Grant](https://github.com/sproogen) - The original Jekyll theme that inspired this project
 - [Astro Documentation](https://docs.astro.build)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs)
 - [Bun Documentation](https://bun.sh/docs)
-- [Zod Documentation](https://zod.dev)
 
 ## 📧 Contact
 
