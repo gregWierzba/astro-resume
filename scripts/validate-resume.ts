@@ -11,6 +11,7 @@ const ContactSchema = z.object({
 const HeaderSchema = z.object({
   name: z.string(),
   title: z.string(),
+  pdf: z.string(),
   contact: ContactSchema,
 });
 
@@ -50,7 +51,6 @@ const ResumeSchema = z.object({
   experience: z.array(ExperienceSchema),
   education: z.array(EducationSchema),
   afterHours: z.string(),
-  skills: z.array(z.string()),
   footerNote: z.string(),
 });
 
@@ -64,7 +64,6 @@ try {
   console.log(`- ${validatedResume.experience.length} work experiences`);
   console.log(`- ${validatedResume.projects.length} projects`);
   console.log(`- ${validatedResume.education.length} education entries`);
-  console.log(`- ${validatedResume.skills.length} skills listed`);
 } catch (error) {
   if (error instanceof z.ZodError) {
     console.error("❌ Resume validation failed:");

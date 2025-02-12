@@ -47,6 +47,23 @@ const { header } = Astro.props;
         ></path>
       </svg>
     </a>
+    <a
+      href={header.pdf}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="no-print text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 transition-all duration-500 ease-in-out transform hover:scale-105 opacity-90 hover:opacity-100"
+      download
+    >
+      <svg
+        class="w-10 h-10"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-label="Download PDF Resume"
+      >
+        <path d="M12 16L7 11H10V4H14V11H17L12 16Z"></path>
+        <path d="M18 18H6V20H18V18Z"></path>
+      </svg>
+    </a>
   </div>
   <div class="flex col-span-2 row-span-2 justify-end">
     <p class="text-gray-600 dark:text-gray-400">

@@ -5,7 +5,6 @@ export type Resume = {
   experience: Experience[];
   education: Education[];
   afterHours: string;
-  skills: string[];
   footerNote: string;
 };
 
@@ -41,6 +40,7 @@ export type Education = {
 export type Header = {
   name: string;
   title: string;
+  pdf: string;
   contact: {
     email: string;
     linkedin: string;

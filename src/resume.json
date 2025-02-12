@@ -2,6 +2,7 @@
     "header": {
         "name": "John Doe",
         "title": "Software Engineer",
+        "pdf": "JohnDoeResume.pdf",
         "contact": {
             "email": "john.doe@example.com",
             "linkedin": "https://linkedin.com/in/johndoe",
@@ -10,7 +11,7 @@
     },
     "about": {
         "summary": "Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success.",
-        "photo": "me.jpg"
+        "photo": "avataaars.png"
     },
     "projects": [
         {
@@ -54,12 +55,5 @@
         }
     ],
     "afterHours": "I enjoy playing guitar and reading science fiction novels.",
-    "footerNote": "Last updated on 01-01-2021",
-    "skills": [
-        "JavaScript",
-        "React",
-        "Node.js",
-        "Python",
-        "SQL"
-    ]
+    "footerNote": "Last updated on 01-01-2021"
 }
