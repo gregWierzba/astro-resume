@@ -8,13 +8,13 @@ const { about } = Astro.props;
 ---
 
 <h3>About Me</h3>
-<div class="flex">
-  <div class="no-print px-8">
+<div class="flex flex-col md:flex-row items-center md:items-start">
+  <div class="no-print px-4 md:px-8 mb-6 md:mb-0">
     <span class="profile-img" style={`background-image: url(${about.photo})`}
     ></span>
   </div>
   <div>
-    <p class="text-justify" set:html={about.summary} />
+    <p class="text-left md:text-justify" set:html={about.summary} />
   </div>
 </div>
 <style>
