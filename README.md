@@ -9,6 +9,9 @@ A modern, type-safe resume builder created with Astro, TypeScript, and TailwindC
 
 This project is an Astro implementation inspired by the [Modern Resume Theme](https://github.com/sproogen/modern-resume-theme) created by [James Grant](https://github.com/sproogen). The original theme was built for Jekyll, and this project adapts its design principles and layout while reimagining it with modern web technologies.
 
+<img width="1644" alt="image" src="https://github.com/user-attachments/assets/bbecfe69-b552-40aa-bbd7-06ea38b2fa2d" />
+
+
 ## 🚀 Features
 
 - **Type-Safe Resume Data**: Strongly typed resume structure using TypeScript
